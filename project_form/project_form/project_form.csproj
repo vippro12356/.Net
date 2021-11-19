@@ -65,6 +65,7 @@
     <Compile Include="control\car.cs" />
     <Compile Include="control\DbCon.cs" />
     <Compile Include="control\login.cs" />
+    <Compile Include="control\nhanvien.cs" />
     <Compile Include="control\services.cs" />
     <Compile Include="Customer.cs">
       <SubType>Form</SubType>

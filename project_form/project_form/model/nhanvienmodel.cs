@@ -8,11 +8,23 @@ namespace project_form.model
 {
     public class nhanvienmodel
     {
-        string tennv { get; set; }
-        DateTime ngaysinh { get; set; }
-        string gioitinh { get; set; }
-        string diachi { get; set; }
-        string dienthoai { get; set; }
-        string email { get; set; }
+        public int manv { get; set; }
+        public string tennv { get; set; }
+        public DateTime ngaysinh { get; set; }
+        public string gioitinh { get; set; }
+        public string diachi { get; set; }
+        public string dienthoai { get; set; }
+        public string email { get; set; }
+
+        public nhanvienmodel(int manv, string tennv, DateTime ngaysinh, string gioitinh, string diachi, string dienthoai, string email)
+        {
+            this.manv = manv;
+            this.tennv = tennv;
+            this.ngaysinh = ngaysinh;
+            this.gioitinh = gioitinh;
+            this.diachi = diachi;
+            this.dienthoai = dienthoai;
+            this.email = email;
+        }
     }
 }

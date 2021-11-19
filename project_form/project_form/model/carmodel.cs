@@ -15,7 +15,7 @@ namespace project_form.model
         {
 
         }
-        public carmodel(int id,string ten,string img)
+        public carmodel(int id, string ten, string img)
         {
             this.id = id;
             this.ten = ten;
