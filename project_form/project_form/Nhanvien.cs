@@ -8,12 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using project_form.control;
+using project_form.model;
 namespace project_form
 {
     public partial class Nhanvien : Form
     {
         services sv = new services();
-        nhanvien nv = new nhanvien();
+        NhanVien nv_control = new NhanVien();
         public Nhanvien()
         {
             InitializeComponent();
@@ -22,7 +23,8 @@ namespace project_form
 
         public void loadlistview()
         {
-            DataTable dt = nv.tablenhanvien();
+            lsvDSNhanVien.Items.Clear();
+            DataTable dt = nv_control.TableNhanVien();
             foreach (DataRow row in dt.Rows)
             {
                 string manv = row.ItemArray[0].ToString();
@@ -50,7 +52,7 @@ namespace project_form
 
         private void btnXoa_MouseEnter(object sender, EventArgs e)
         {
-         sv.mouseenter(btnXoa);
+            sv.mouseenter(btnXoa);
         }
 
         private void btnXoa_MouseLeave(object sender, EventArgs e)
@@ -65,12 +67,27 @@ namespace project_form
 
         private void btnSua_MouseLeave(object sender, EventArgs e)
         {
-            sv.mouseleave(btnSua);        
+            sv.mouseleave(btnSua);
         }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-
+            if (this.Controls.OfType<TextBox>().Any(t => t.Text.Length == 0))
+            {
+                MessageBox.Show("Nhập dữ liệu đầy đủ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                NhanVienModel nv = new NhanVienModel(txtTenNV.Text, dtpNgaySinh.Value, cmbGioiTinh.Text, txtDiaChi.Text, txtDienThoai.Text, txtEmail.Text);
+                if (nv_control.ThemNhanVien(nv))
+                {
+                    MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    loadlistview();
+                }
+                else
+                    MessageBox.Show("Thêm thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
         }
 
         private void btnXoa_Click(object sender, EventArgs e)

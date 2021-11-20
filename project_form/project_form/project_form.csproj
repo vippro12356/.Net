@@ -65,7 +65,7 @@
     <Compile Include="control\car.cs" />
     <Compile Include="control\DbCon.cs" />
     <Compile Include="control\login.cs" />
-    <Compile Include="control\nhanvien.cs" />
+    <Compile Include="control\NhanVien.cs" />
     <Compile Include="control\services.cs" />
     <Compile Include="Customer.cs">
       <SubType>Form</SubType>
@@ -98,6 +98,7 @@
       <DependentUpon>Homeform.cs</DependentUpon>
     </Compile>
     <Compile Include="model\NhanVienModel.cs" />
+    <Compile Include="model\NhaSanXuatModel.cs" />
     <Compile Include="Nhanvien.cs">
       <SubType>Form</SubType>
     </Compile>

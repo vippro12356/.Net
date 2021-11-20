@@ -26,5 +26,15 @@ namespace project_form.model
             this.DienThoai = dienThoai;
             this.Email = email;
         }
+
+        public NhanVienModel(string tenNV, DateTime ngaySinh, string gioiTinh, string diaChi, string dienThoai, string email)
+        {
+            this.TenNV = tenNV;
+            this.NgaySinh = ngaySinh;
+            this.GioiTinh = gioiTinh;
+            this.DiaChi = diaChi;
+            this.DienThoai = dienThoai;
+            this.Email = email;
+        }
     }
 }
