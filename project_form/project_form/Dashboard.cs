@@ -25,7 +25,7 @@ namespace project_form
         {
             InitializeComponent();
             this.panelloadform.Controls.Clear();
-            label1.Text = "Xin chào:"+val;
+            label1.Text = "Xin chào: "+val;
             Homeform homefrm = new Homeform()
             {
                 Dock = DockStyle.Fill,
