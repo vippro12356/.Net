@@ -6,25 +6,25 @@ using System.Threading.Tasks;
 
 namespace project_form.model
 {
-    public class nhanvienmodel
+    public class NhanVienModel
     {
-        public int manv { get; set; }
-        public string tennv { get; set; }
-        public DateTime ngaysinh { get; set; }
-        public string gioitinh { get; set; }
-        public string diachi { get; set; }
-        public string dienthoai { get; set; }
-        public string email { get; set; }
+        public int MaNV { get; set; }
+        public string TenNV { get; set; }
+        public DateTime NgaySinh { get; set; }
+        public string GioiTinh { get; set; }
+        public string DiaChi { get; set; }
+        public string DienThoai { get; set; }
+        public string Email { get; set; }
 
-        public nhanvienmodel(int manv, string tennv, DateTime ngaysinh, string gioitinh, string diachi, string dienthoai, string email)
+        public NhanVienModel(int maNV, string tenNV, DateTime ngaySinh, string gioiTinh, string diaChi, string dienThoai, string email)
         {
-            this.manv = manv;
-            this.tennv = tennv;
-            this.ngaysinh = ngaysinh;
-            this.gioitinh = gioitinh;
-            this.diachi = diachi;
-            this.dienthoai = dienthoai;
-            this.email = email;
+            this.MaNV = maNV;
+            this.TenNV = tenNV;
+            this.NgaySinh = ngaySinh;
+            this.GioiTinh = gioiTinh;
+            this.DiaChi = diaChi;
+            this.DienThoai = dienThoai;
+            this.Email = email;
         }
     }
 }

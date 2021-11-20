@@ -97,7 +97,7 @@
     <Compile Include="Homeform.Designer.cs">
       <DependentUpon>Homeform.cs</DependentUpon>
     </Compile>
-    <Compile Include="model\nhanvienmodel.cs" />
+    <Compile Include="model\NhanVienModel.cs" />
     <Compile Include="Nhanvien.cs">
       <SubType>Form</SubType>
     </Compile>
