@@ -17,15 +17,16 @@ namespace project_form
         public const int HT_CAPTION = 0x2;
 
         [DllImportAttribute("user32.dll")]
-        public static extern int SendMessage(IntPtr hWnd,
-                         int Msg, int wParam, int lParam);
+        public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
+
         [DllImportAttribute("user32.dll")]
         public static extern bool ReleaseCapture();
+
         public Dashboard(string val)
         {
             InitializeComponent();
             this.panelloadform.Controls.Clear();
-            label1.Text = "Xin chào: "+val;
+            lblUsername.Text = "Xin chào: " + val;
             Homeform homefrm = new Homeform()
             {
                 Dock = DockStyle.Fill,
@@ -49,31 +50,31 @@ namespace project_form
 
         private void button1_MouseEnter(object sender, EventArgs e)
         {
-            
+
             buttonhome.BackColor = Color.FromArgb(46, 51, 73);
         }
 
         private void button2carlist_MouseEnter(object sender, EventArgs e)
         {
-           
+
             buttoncarlist.BackColor = Color.FromArgb(46, 51, 73);
         }
 
         private void buttoncus_MouseEnter(object sender, EventArgs e)
         {
-           
+
             buttoncus.BackColor = Color.FromArgb(46, 51, 73);
         }
 
         private void buttonorder_MouseEnter(object sender, EventArgs e)
         {
-            
+
             buttonorder.BackColor = Color.FromArgb(46, 51, 73);
         }
 
         private void buttonlogout_MouseEnter(object sender, EventArgs e)
         {
-           
+
             buttonlogout.BackColor = Color.FromArgb(46, 51, 73);
         }
 
@@ -127,7 +128,9 @@ namespace project_form
             this.panelloadform.Controls.Clear();
             Homeform homefrm = new Homeform()
             {
-                Dock=DockStyle.Fill,TopLevel=false,TopMost=true
+                Dock = DockStyle.Fill,
+                TopLevel = false,
+                TopMost = true
             };
             homefrm.FormBorderStyle = FormBorderStyle.None;
             this.panelloadform.Controls.Add(homefrm);
@@ -165,9 +168,9 @@ namespace project_form
         {
             f = new Form()
             {
-                Dock=DockStyle.Fill,
-                TopLevel=false,
-                TopMost=true
+                Dock = DockStyle.Fill,
+                TopLevel = false,
+                TopMost = true
             };
             f.FormBorderStyle = FormBorderStyle.None;
             this.panelloadform.Controls.Add(f);
@@ -227,9 +230,9 @@ namespace project_form
             this.WindowState = FormWindowState.Minimized;
         }
 
-       
 
-        
+
+
         private void button3_MouseEnter(object sender, EventArgs e)
         {
             button3.BackColor = Color.FromArgb(46, 51, 73);
